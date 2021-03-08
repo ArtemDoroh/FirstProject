@@ -1,0 +1,127 @@
+@import "reset";
+
+$primary: #4985ff;
+$fs: 16px;
+$white: #fff;
+$dark:#323232;
+$grey: #999999;
+$baseAlign: center;
+
+@mixin flex($justify: flex-start) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+@mixin mainCol {
+    width: 1100px;
+    margin: 0 auto;
+}
+// header styles
+header{
+    height: 100px;
+    border-bottom: 1px solid #a1a1a180;
+    z-index: 2;
+    position: relative;
+    @include flex(center);
+    nav.navigation {
+        @include flex(flex-end);
+        @include mainCol();
+        .nav-link{
+            color: $white;
+            font-weight: 500;
+            font-size: $fs;
+            line-height: $fs * 1.25;
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 2px;
+                    width: calc(100% + 40px);
+                    left: -20px;
+                    bottom: -39px;
+                    background: $white;
+                }
+            }
+        }
+    }
+}
+// first section
+#main{
+    height: 900px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/Rectangle.jpg);
+    position: relative;
+    top: -100px;
+}
+
+
+
+
+// @mixin center {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: $aaa;
+// }
+// @mixin flex($dir, $justify, $align: $baseAlign) {
+//     display: flex;
+//     flex-direction: $dir;
+//     justify-content: $justify;
+//     align-items: $align;
+// }
+
+// %section{
+//     width: 100%;
+//     background: $primary;
+//     height: 400px;
+// }
+
+// .button{ 
+//     @include center();
+//     background: $primary;
+//     color: $white;
+//     font-size: $fs;
+// }
+// .more-link{
+//     color: $primary;
+//     font-size: $fs;
+//     @include flex(row, center);
+// }
+// .description{
+//     color: $grey;
+//     font-size: $fs;
+//     @include flex(column, space-between, flex-end);
+// }
+// .main-heading{
+//     color: $white;
+//     font-size: $fs * 3;
+// }
+// .small-heading{
+//     color: $dark;
+//     font-size: $fs + 2;
+// }
+// .ggg, .main-heading{
+//     @extend %section;
+// }
+
+// div.my-div{
+//     width: 300px;
+//     height: 30px;
+//     background: $primary;
+//     p.par {
+//         width: 50%;
+//     }
+//     color: $white;
+//     &::after {
+//         content: "";
+//         position: absolute;
+//     }
+//     @media (max-width: 1024px){
+//         width: 200px;
+//         height: 20px;
+//     }
+// }

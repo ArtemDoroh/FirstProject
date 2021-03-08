@@ -1,0 +1,58 @@
+p, h1, h2, h3, h4, h5, h6, body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 100px;
+  border-bottom: 1px solid #a1a1a180;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1100px;
+  margin: 0 auto;
+}
+header nav.navigation .nav-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 40px;
+}
+header nav.navigation .nav-link:last-child {
+  margin-right: 0;
+}
+header nav.navigation .nav-link:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: calc(100% + 40px);
+  left: -20px;
+  bottom: -39px;
+  background: #fff;
+}
+
+#main {
+  height: 900px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/Rectangle.jpg);
+  position: relative;
+  top: -100px;
+}
+
+/*# sourceMappingURL=style.css.map */
